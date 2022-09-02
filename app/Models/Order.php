@@ -18,8 +18,8 @@ class Order extends Model
         'user_id'
     ];
 
-    public function product()
+    public function products()
     {
-        return $this->hasOne(OrderProduct::class, 'order_id', 'id');
+        return $this->hasMany(OrderProduct::class, 'order_id', 'id');
     }
 }
